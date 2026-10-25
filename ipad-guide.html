@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <title>iPadでの使い方 — 牌譜の橋</title>
+    <style>
+      body {
+        max-width: 820px;
+        margin: auto;
+        padding: 24px;
+        font:
+          16px/1.9 -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: #243b34;
+        background: #f6f5ef;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 21px;
+        margin-top: 36px;
+      }
+      a {
+        color: #174b3c;
+        text-underline-offset: 4px;
+      }
+      li {
+        margin: 14px 0;
+        padding-left: 4px;
+      }
+      .box {
+        padding: 18px;
+        border: 1px solid #c7d6bf;
+        border-radius: 12px;
+        background: #fffef9;
+      }
+      .note {
+        background: #fbf2df;
+        padding: 16px;
+        border-radius: 12px;
+      }
+      summary {
+        min-height: 48px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      code {
+        background: #e8eddf;
+        padding: 2px 5px;
+        overflow-wrap: anywhere;
+      }
+      button {
+        font: inherit;
+      }
+      small {
+        font-size: 13px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 14px;
+      }
+      td,
+      th {
+        padding: 10px;
+        border: 1px solid #cdd5c4;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./">← 牌譜の橋に戻る</a>
+    <h1>iPadで牌譜をNAGA用に変換する</h1>
+    <p class="note">
+      <strong>URLを貼るだけの自動取得には未対応です。</strong
+      >Safariの雀魂で自分が閲覧できる牌譜を開き、補助ツールで端末内に取り出します。この手順ではNAGAの解析ボタンは押しません。
+    </p>
+    <h2>初回だけ：無料のブックマーク方式</h2>
+    <ol>
+      <li>
+        Safariで<a href="./">アプリ</a
+        >を開きます。「使い方」の<strong>Safari用コードをコピー</strong>をタップ。コピーできなければ「コピーできない場合」を開き、コード欄を長押し→すべてを選択→コピーします。
+      </li>
+      <li>
+        Safariの<strong>共有ボタン（四角から上向き矢印）→ブックマークを追加</strong>を選び、名前を「牌譜を保存」にして保存します。
+      </li>
+      <li>
+        Safariのサイドバー／ブックマーク一覧で「牌譜を保存」を長押しして<strong>編集</strong>します。URL欄を全選択し、コピーしたコード全体を貼り付けます。先頭が
+        <code>javascript:</code>
+        であることを確認し、保存します。名前の欄ではなくURL欄に貼り付けてください。
+      </li>
+      <li>
+        Safariの雀魂Web版に自分でログインし、登録したブックマークを開きます。右下に<strong>準備OK</strong>の小さなパネルが出れば、このページで有効です。
+      </li>
+    </ol>
+    <p>
+      ブックマーク方式は雀魂のページを再読み込みするたびに実行が必要です。自動実行したい場合は下のSafari拡張方式を使います。雀魂のネイティブアプリ内では動きません。
+    </p>
+    <h2>毎回：共有URLから牌譜を開いて変換</h2>
+    <ol>
+      <li>
+        雀魂で牌譜の共有URLをコピーします。アプリの<strong>雀魂のURL</strong>タブへ貼り付け、<strong>URLを確認</strong>します。このボタンはURLの形式確認で、牌譜を取得するボタンではありません。
+      </li>
+      <li>
+        <strong>雀魂で牌譜を開く</strong
+        >をタップします。必要なら自分でログインしてください。取得ツールを有効にし、<strong>準備OK</strong>の表示後に牌譜を開きます。既に牌譜を開いた後にツールを有効にした場合、一度牌譜一覧へ戻って開き直します。
+      </li>
+      <li>
+        「取得できました」と表示されたら<strong>変換画面に送る</strong>をタップ。新しいSafariタブで変換画面が開き、牌譜が読み込まれます。牌譜本体はタブ間で渡し、URLやサーバーには載せません。
+      </li>
+      <li>
+        変換する局を<strong>30局以下</strong>に選びます。匿名化は初期値ONです。<strong>選んだ局をNAGA用に変換→コピーする</strong>をタップします。自動コピーできなければ、出力欄を長押ししてコピーします。
+      </li>
+      <li>
+        NAGAの画面で、自分でログインして<strong>カスタム牌譜解析</strong>を選びます。出力を貼り付け、東風／半荘（東南）と対象プレイヤーを確認します。<strong>解析を押すとポイントを消費するため、この確認手順では押さないでください。</strong>本アプリからは注文しません。
+      </li>
+    </ol>
+    <h2>直接渡せないとき：ファイル方式</h2>
+    <ol>
+      <li>
+        雀魂の補助ツールで<strong>牌譜ファイルを保存</strong>をタップします。Safariのダウンロードを許可します。
+      </li>
+      <li>
+        「ファイル」アプリの<strong>ダウンロード</strong>で
+        <code>majsoul-数字.msr.json</code> を確認します。保存先がiCloud
+        DriveまたはこのiPad内のどちらかは、Safariのダウンロード設定に従います。
+      </li>
+      <li>
+        変換アプリに戻り、<strong>ファイル・データ→牌譜ファイルを選ぶ→ブラウズ→ダウンロード</strong>から保存したファイルを選びます。
+      </li>
+      <li>
+        局数が表示されたら、上の手順4以降と同じです。使い終わった実牌譜ファイルは必要に応じて自分で削除してください。アプリは履歴を保存しません。
+      </li>
+    </ol>
+    <h2>任意：Safari拡張で自動実行する</h2>
+    <p>
+      無料で利用できる版のUserscriptsを利用する方法です。App
+      Storeに料金が表示される場合はインストールせず、上のブックマーク方式を使ってください。有料の拡張は不要です。
+    </p>
+    <ol>
+      <li>Userscriptsを開き、スクリプト保存先フォルダを確認します。</li>
+      <li>
+        iPadの<strong>設定→アプリ→Safari→機能拡張</strong>（OSによっては設定→Safari→機能拡張）でUserscriptsを有効にし、雀魂のサイトに対して許可します。すべてのサイトへの許可は必要ありません。
+      </li>
+      <li>
+        Safariで<a href="./capture.user.js">取得用スクリプトを開く</a
+        >を選び、Safariの機能拡張メニューからUserscriptsを開いてインストールします。または
+        <code>capture.user.js</code> を保存先フォルダに置きます。
+      </li>
+      <li>
+        雀魂を再読み込みし、準備OKを確認して牌譜を開きます。スクリプトは
+        <code>@run-at document-start</code>・<code>@inject-into page</code>
+        が必要です。変更せず使ってください。
+      </li>
+    </ol>
+    <p>
+      <a
+        href="https://github.com/quoid/userscripts#ios-ipados"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Userscripts公式のiPad手順</a
+      >も確認できます。雀魂のCSPや更新によって注入できない場合は、設定を弱めずエラー内容を確認してください。
+    </p>
+    <h2>困ったとき</h2>
+    <details>
+      <summary>準備OKが出ない／取得待ちのまま</summary>
+      <p>
+        Safariの雀魂Web版か確認します。ページ再読み込み後はブックマークを再実行。既に表示済みの牌譜は取り出せないため、一覧へ戻って再度開きます。他の拡張による干渉や雀魂の通信方式の変更でも動かない場合があります。ログイン情報やトークンを他人に渡す必要はありません。
+      </p>
+    </details>
+    <details>
+      <summary>変換画面へ渡せない</summary>
+      <p>
+        新しいタブが開いているか確認します。ポップアップが拒否されたり、ホーム画面アプリとの別ウィンドウになったりする場合があります。無理にブラウザの安全設定を変えず、牌譜ファイルを保存して読み込む方法を使ってください。
+      </p>
+    </details>
+    <details>
+      <summary>三人麻雀・特殊ルール・大きな牌譜でエラー</summary>
+      <p>
+        通常の四人麻雀のみ対応、ファイル上限8MBです。別URLにある大きな牌譜本体の取得がCORS等で拒否された場合も、成功したようには扱いません。
+      </p>
+    </details>
+    <h2>ホーム画面とオフライン</h2>
+    <p>
+      Safariの共有→<strong>ホーム画面に追加</strong>。一度オンラインでアプリを開き、読み込みを終えてから使います。保存済みファイルの変換はオフラインでも可能です。雀魂からの取得とNAGAの利用には通信が必要です。Safariがキャッシュを削除した場合は再度オンラインで開いてください。
+    </p>
+    <h2>確認できている範囲</h2>
+    <table>
+      <tr>
+        <th>項目</th>
+        <th>状況</th>
+      </tr>
+      <tr>
+        <td>ファイル変換・コピー・保存・タブ間受け渡し</td>
+        <td>ChromiumとLinux WebKitで自動テスト済み</td>
+      </tr>
+      <tr>
+        <td>NAGA公式クライアントの入力チェック</td>
+        <td>実牌譜12局を含む14ケースを手元で実行して成功</td>
+      </tr>
+      <tr>
+        <td>指定URLの匿名API取得</td>
+        <td>実要求はエラー1004、牌譜本体なし</td>
+      </tr>
+      <tr>
+        <td>iPad実機での取得・保存・ホーム画面追加</td>
+        <td>未検証</td>
+      </tr>
+      <tr>
+        <td>NAGAサーバーでの受理・解析</td>
+        <td>未検証。注文・ポイント消費は行っていません</td>
+      </tr>
+    </table>
+    <p class="box">
+      非公式ツールです。閲覧・利用権限のある牌譜だけを、各サービスの現行利用規約に従って扱ってください。アプリは認証情報を集めず、ログイン回避・注文自動化を行いません。
+    </p>
+    <a href="./">アプリへ戻る →</a>
+  </body>
+</html>

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#143e36" />
+    <meta
+      name="description"
+      content="雀魂の四人麻雀牌譜を、iPadでNAGAのカスタム牌譜形式に。データは端末内で変換します。"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="牌譜の橋" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>牌譜の橋 — 雀魂からNAGAへ</title>
+    <script type="module" crossorigin src="./assets/index-D74NB0SR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BdIWV-Ae.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="header">
+        <a class="brand" href="./" aria-label="牌譜の橋 ホーム"
+          ><span class="brand-mark" aria-hidden="true">橋</span
+          ><span>牌譜の橋 <small>HAIFU NO HASHI</small></span></a
+        >
+        <a class="help-link" href="#guide"
+          >使い方 <span aria-hidden="true">↗</span></a
+        >
+      </header>
+      <main>
+        <section class="hero" aria-labelledby="heading">
+          <div>
+            <div class="eyebrow"><span></span> 雀魂 → NAGA / iPad対応</div>
+            <h1 id="heading">一局の気づきを、<br />次の一手へ。</h1>
+            <p class="hero-copy">
+              雀魂の牌譜を、NAGAで振り返るための形に。<br />ファイルを読み込むだけ。変換は、あなたの端末の中で。
+            </p>
+          </div>
+          <div class="tiles-art" aria-hidden="true">
+            <span class="tile tile-one"><i>一</i><b>萬</b></span
+            ><span class="tile tile-two"><i>二</i><b>萬</b></span
+            ><span class="tile tile-three"><i>三</i><b>萬</b></span>
+            <div class="art-caption">REPLAY. REFLECT. IMPROVE.</div>
+          </div>
+        </section>
+        <ol class="steps" aria-label="変換の流れ">
+          <li><span>01</span> 牌譜を用意</li>
+          <li><span>02</span> 局を選んで変換</li>
+          <li><span>03</span> NAGAへコピー</li>
+        </ol>
+        <div class="workspace-grid">
+          <section class="card input-card" aria-labelledby="input-title">
+            <div class="section-heading">
+              <div>
+                <span class="overline">SOURCE</span>
+                <h2 id="input-title">牌譜を読み込む</h2>
+              </div>
+              <span class="pill">四人麻雀</span>
+            </div>
+            <div class="tabs" role="tablist" aria-label="読み込み方法">
+              <button
+                id="file-tab"
+                role="tab"
+                aria-selected="true"
+                aria-controls="file-panel"
+              >
+                ファイル・データ</button
+              ><button
+                id="url-tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="url-panel"
+                tabindex="-1"
+              >
+                雀魂のURL
+              </button>
+            </div>
+            <div id="file-panel" role="tabpanel" aria-labelledby="file-tab">
+              <label class="file-drop" for="replay-file"
+                ><span class="upload-icon" aria-hidden="true">↑</span
+                ><strong>牌譜ファイルを選ぶ</strong
+                ><span>.msr.json / 天鳳形式 .json / 応答 .bin</span
+                ><span class="file-action"
+                  >iPadの「ファイル」から選択</span
+                ></label
+              >
+              <input
+                class="visually-hidden"
+                type="file"
+                id="replay-file"
+                accept=".json,.bin,.msr,.txt,application/json,application/octet-stream,text/plain"
+              />
+              <p class="micro">
+                最大8MB。外部サーバーへのアップロードはありません。
+              </p>
+              <details class="paste-details">
+                <summary>JSON・天鳳JSON URLを貼り付ける</summary>
+                <label for="data-input" class="field-label">牌譜データ</label
+                ><textarea
+                  id="data-input"
+                  rows="5"
+                  placeholder="天鳳形式JSON、取得ツールのJSON、または局ごとの tenhou.net/5/#json=…"
+                  spellcheck="false"
+                ></textarea
+                ><button id="load-data" class="button secondary">
+                  貼り付けたデータを読み込む
+                </button>
+              </details>
+              <div class="demo-row">
+                <span>まずは操作を試す</span
+                ><button id="demo-button" class="text-button">
+                  サンプル牌譜を読み込む <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+            <div
+              id="url-panel"
+              role="tabpanel"
+              aria-labelledby="url-tab"
+              hidden
+            >
+              <label class="field-label" for="replay-url"
+                >雀魂の牌譜共有URL</label
+              ><textarea
+                id="replay-url"
+                rows="3"
+                placeholder="https://game.mahjongsoul.com/?paipu=…"
+                spellcheck="false"
+                autocapitalize="off"
+                autocomplete="off"
+              ></textarea>
+              <div class="button-row">
+                <button id="paste-url" class="button secondary">ペースト</button
+                ><button id="check-url" class="button primary">
+                  URLを確認
+                </button>
+              </div>
+              <div class="notice">
+                <strong>URLだけの自動取得には未対応です</strong>
+                <p>
+                  未ログインのAPI取得はエラーとなることを確認しています。Safariの雀魂にログインし、補助ツールで牌譜を開いて取得してください。取得後は「変換画面に送る」か、ファイル保存で渡せます。
+                </p>
+              </div>
+              <div id="url-result" hidden>
+                <p id="url-id" class="micro"></p>
+                <a
+                  id="open-replay"
+                  class="button secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >雀魂で牌譜を開く ↗</a
+                >
+                <p class="micro">
+                  補助ツールを有効にしてから牌譜を開き直してください。
+                </p>
+              </div>
+            </div>
+            <div
+              id="input-status"
+              class="status"
+              role="status"
+              aria-live="polite"
+            ></div>
+          </section>
+          <section class="card output-card" aria-labelledby="output-title">
+            <div class="section-heading">
+              <div>
+                <span class="overline">CONVERT</span>
+                <h2 id="output-title">NAGA用データをつくる</h2>
+              </div>
+              <span class="output-icon" aria-hidden="true">↗</span>
+            </div>
+            <div id="empty-state" class="empty-state">
+              <span aria-hidden="true">▤</span>
+              <h3>振り返りたい一局を選ぼう</h3>
+              <p>
+                牌譜を読み込むと、ここに局の一覧が表示されます。<br />必要な局だけをNAGA用に変換できます。
+              </p>
+              <span class="local-badge">◉ 端末内で処理・ログイン不要</span>
+            </div>
+            <div id="loaded-state" hidden>
+              <div class="game-meta">
+                <strong id="game-title"></strong
+                ><span id="game-description"></span>
+              </div>
+              <div id="demo-notice" class="notice" hidden>
+                操作確認用のサンプルです。指定されたテスト用牌譜ではありません。NAGAで解析注文しないでください。
+              </div>
+              <div class="selection-header">
+                <h3>変換する局 <small id="selection-count"></small></h3>
+                <button id="toggle-rounds" class="text-button">
+                  すべて解除
+                </button>
+              </div>
+              <div id="round-list" class="round-list"></div>
+              <label class="checkbox-row"
+                ><input
+                  type="checkbox"
+                  id="anonymous"
+                  checked
+                />出力のプレイヤー名を匿名にする</label
+              >
+              <p class="micro">
+                NAGAは一度に30局まで。名前を残す場合も8文字まで・絵文字や％表記を調整します。手牌や打牌は変更しません。
+              </p>
+              <div id="warnings" class="notice" hidden></div>
+              <button id="convert-button" class="button primary full">
+                選んだ局をNAGA用に変換 <span aria-hidden="true">→</span>
+              </button>
+            </div>
+            <div id="result" class="result" hidden>
+              <div class="result-heading">
+                <strong id="result-count"></strong><span>変換完了</span>
+              </div>
+              <label for="output" class="field-label"
+                >NAGA カスタム牌譜入力用</label
+              ><textarea
+                id="output"
+                readonly
+                rows="5"
+                spellcheck="false"
+              ></textarea>
+              <div class="button-row">
+                <button id="copy-output" class="button primary">
+                  コピーする</button
+                ><button id="save-output" class="button secondary">
+                  テキスト保存
+                </button>
+              </div>
+              <p id="copy-status" class="micro" role="status"></p>
+              <p id="naga-rule-note" class="micro"></p>
+              <a
+                class="naga-link"
+                href="https://naga.dmv.nico/naga_report/order_form/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >NAGAのカスタム牌譜画面を開く ↗</a
+              >
+              <p class="micro">
+                自動送信しません。NAGAで貼り付け・内容確認後、ご自身で注文してください。解析にはNAGAのポイントが必要です。
+              </p>
+            </div>
+            <div id="output-status" class="status" role="status"></div>
+          </section>
+        </div>
+        <section id="guide" class="guide" aria-labelledby="guide-title">
+          <div class="guide-heading">
+            <span class="overline">HOW IT WORKS</span>
+            <h2 id="guide-title">iPadだけで、牌譜を用意する。</h2>
+            <p>
+              <a class="button secondary" href="./ipad-guide.html"
+                >iPadの詳しい操作手順を開く ↗</a
+              >
+            </p>
+            <p>
+              初回だけ補助ツールを登録。2回目からは牌譜を開き、「変換画面に送る」で渡せます。<br />Safari実機での取得は未検証です。雀魂の更新で動作しなくなる場合があります。
+            </p>
+          </div>
+          <div class="guide-grid">
+            <article>
+              <span class="guide-number">1</span>
+              <h3>保存ツールを登録</h3>
+              <p>
+                下の「Safari用コードをコピー」を押します。Safariで任意のページをブックマークし、名前を「牌譜を保存」、URL欄をコピーしたコードに置き換えます。
+              </p>
+              <button id="copy-bookmarklet" class="button secondary">
+                Safari用コードをコピー
+              </button>
+              <p id="bookmarklet-status" class="micro" role="status"></p>
+              <details>
+                <summary>コピーできない場合</summary>
+                <p>次のコード欄をタップして全選択・コピーしてください。</p>
+                <textarea
+                  id="bookmarklet-code"
+                  readonly
+                  rows="3"
+                  aria-label="Safariブックマーク用コード"
+                ></textarea>
+              </details>
+            </article>
+            <article>
+              <span class="guide-number">2</span>
+              <h3>雀魂で牌譜を保存</h3>
+              <p>
+                Safariで雀魂Web版にログインし、登録したブックマークを実行します。「準備OK」の表示後、牌譜を開きます。取得できたら「変換画面に送る」をタップ。新しいタブに牌譜が渡ります。ファイルの選び直しは不要です。
+              </p>
+              <p class="micro">
+                すでに牌譜を開いているときは、牌譜一覧へ戻って開き直します。雀魂アプリ内では使用できません。
+              </p>
+            </article>
+            <article>
+              <span class="guide-number">3</span>
+              <h3>戻って、変換する</h3>
+              <p>
+                受け取った画面で局を選んで変換し、コピーしたデータをNAGAの「カスタム牌譜解析」欄に貼り付けます。タブ間の受け渡しが動かない場合は「牌譜ファイルを保存」→このアプリでファイル選択が使えます。
+              </p>
+              <p class="micro">
+                ブックマークが動かない場合は、Userscripts等のSafari拡張に
+                <a href="./capture.user.js">取得用スクリプト</a>
+                を登録する方法もあります。対応・料金は提供元で確認してください。
+              </p>
+            </article>
+          </div>
+          <details class="faq">
+            <summary>対応形式・制限とプライバシー</summary>
+            <p>
+              通常ルールの四人麻雀に対応。三人麻雀・特殊ルールは対象外です。連続槓後の槍槓や同じ牌の複数回の手出し後のポンは、天鳳形式やNAGA側の制限で再現・解析できない場合があります。
+            </p>
+            <p>
+              牌譜はメモリ上で処理し、履歴は保存しません。端末に保存したファイルはご自身で管理してください。匿名化は出力の名前だけに適用され、手牌・対局日時などは残ります。アプリの配信・更新時と、ご自身で開く外部リンクでは通信が発生します。
+            </p>
+            <p>
+              非公式の変換補助ツールです。各サービスの利用規約（<a
+                href="https://naga.dmv.nico/rules.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                >NAGA有料プラン規約</a
+              >）と共有権限を確認し、ご自身が閲覧・利用できる牌譜だけを扱ってください。認証回避・自動ログイン・NAGAへの自動注文は行いません。NAGA公式クライアントの入力チェックは実牌譜12局で確認済みです。NAGAサーバーでの受理・解析成功は未検証です。
+            </p>
+          </details>
+          <div class="install-note">
+            <span aria-hidden="true">＋</span>
+            <p>
+              <strong>いつもの場所に、牌譜の橋。</strong
+              ><br />HTTPSで設置後、Safariの共有メニューから「ホーム画面に追加」。一度読み込めば、ファイルの変換はオフラインでも使えます。
+            </p>
+          </div>
+        </section>
+      </main>
+      <section class="notice" aria-label="検証状況">
+        <strong>検証済みと未確認を分けてご案内します</strong>
+        <p>
+          Chromium・WebKitでファイル変換とタブ間受け渡しを自動テストしています。NAGA公式の入力チェックも端末内で照合しています。iPad実機での雀魂取得・保存・ホーム画面追加、NAGAサーバーへの送信は未検証です。URLだけで自動変換できるアプリではありません。
+        </p>
+      </section>
+      <footer>
+        <span>牌譜の橋 <small>v0.2 · 端末内変換</small></span>
+        <p>
+          <a href="./THIRD_PARTY_NOTICES.md">ライセンスと出典</a
+          ><br />雀魂・NAGAの公式サービスではありません。<br />変換ツールは無料。NAGAの解析料金は別途必要です。
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

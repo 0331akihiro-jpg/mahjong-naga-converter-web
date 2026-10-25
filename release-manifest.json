@@ -1,0 +1,102 @@
+{
+  "app": "牌譜の橋",
+  "version": "0.2.0",
+  "containsRealReplays": false,
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "apple-touch-icon.png",
+      "bytes": 1015,
+      "sha256": "00e38fa6959c2549a5b8f84385e45928220a37f8415f1177a076f1eb87b0af72"
+    },
+    {
+      "path": "assets/index-BdIWV-Ae.css",
+      "bytes": 11988,
+      "sha256": "202a8ce02adc17d87c596a51f714f45713b81b841cbb60ec4404137bec573b88"
+    },
+    {
+      "path": "assets/index-D74NB0SR.js",
+      "bytes": 30010,
+      "sha256": "ce2236fd6cb64a1304dfb9d23cd3396b77b94a6083c39dd1bb856ee0d03945b5"
+    },
+    {
+      "path": "bookmarklet.txt",
+      "bytes": 12848,
+      "sha256": "5d3db73b2f987c4bd2730e2a3661d66c302521dc8ca406d8e538ff39c504e567"
+    },
+    {
+      "path": "capture.user.js",
+      "bytes": 9930,
+      "sha256": "bcfab4f05bbe096ad3c8e99843b485b8620ec7918691cd3a83e2f4d69fa75930"
+    },
+    {
+      "path": "demo.msr.json",
+      "bytes": 664,
+      "sha256": "4e80531843264e48503e7198612514648eebfc8ad81f7b1a05d10247982c79fe"
+    },
+    {
+      "path": "icon-192.png",
+      "bytes": 1057,
+      "sha256": "5f378ad01ca180c0b9d57b7a50a7b3e4c7e1514f485403122f324cc140f11730"
+    },
+    {
+      "path": "icon-512.png",
+      "bytes": 2918,
+      "sha256": "a79650e35362b3746c6c0554ffa1be3f2a013de0419dee598c1377cf346fe6a4"
+    },
+    {
+      "path": "icon.svg",
+      "bytes": 462,
+      "sha256": "41bbc3de25a52ec48df48b699c5df3af9539a06da34e3b4b03bde065ca66bb0e"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17267,
+      "sha256": "b768251eb51bcf996485db982b025b30cb83f3b897577d973ae753bd96fdeac9"
+    },
+    {
+      "path": "ipad-guide.html",
+      "bytes": 10856,
+      "sha256": "949f5a5aa68e6e5b10d59ff932f0fa74be2168eb6fe209d9ae556eca5b4dd073"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1176,
+      "sha256": "88f77502995d1d462483f3c48f6154567090fe4212e5f3c4baa5b214ccfe5b3b"
+    },
+    {
+      "path": "licenses/Apache-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "licenses/AsaChiri-MIT.txt",
+      "bytes": 1065,
+      "sha256": "ccd2592388d63099d9468f1d87bd9edf03abe0ddef7b1c5cd73ff19fae6532c5"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 539,
+      "sha256": "f9d8a2ac2798217a3f1162348c9583fbc34c740088a40e79466c249e08819584"
+    },
+    {
+      "path": "README.md",
+      "bytes": 274,
+      "sha256": "dfccf1fbed3532925e6e8e1d3a027e46459fa924353464c9674e88fc39260f4e"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 1587,
+      "sha256": "d7343a9be0f25dd56fde994e3d7b8b637319bd368734bb55d870f231d4e7cbfa"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2434,
+      "sha256": "ad19662987b9053bd503e91b3851e082c48be1da3308f632fdb4cabc6ffb775d"
+    }
+  ]
+}
