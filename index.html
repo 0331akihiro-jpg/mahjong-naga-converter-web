@@ -53,7 +53,7 @@
             >雀魂公式アプリの共有URLだけでの変換は、現在未対応です。</strong
           >
           <p>
-            このアプリで動作するのは、取得済みの牌譜ファイルの変換です。公式アプリのログイン状態はSafariへ引き継がれません。URLの形式確認だけではNAGA用データは生成されません。
+            Safari版雀魂に自分でログインし、補助ツールを有効にして牌譜を開く方式を試せます。取得後は「変換画面に送る」で渡します。iPad実機での取得は未検証です。
           </p>
         </div>
         <ol class="steps" aria-label="変換の流れ">
@@ -151,21 +151,20 @@
               <div class="notice">
                 <strong>URLだけの自動取得には未対応です</strong>
                 <p>
-                  共有URLの形式は確認できますが、牌譜本文の取得には認証が必要です。公式アプリのURLだけで完了する取得APIはまだ用意できていません。Safari版雀魂や拡張機能は、公式アプリだけを使う場合の解決策にはなりません。
+                  共有URLの形式は確認できますが、牌譜本文の取得には認証が必要です。公式アプリのURLだけで完了する取得APIはまだ用意できていません。Safari版雀魂でログインして取得する場合は、下の補助手順をご利用ください。
                 </p>
               </div>
               <div id="url-result" hidden>
                 <p id="url-id" class="micro"></p>
                 <a
                   id="open-replay"
-                  hidden
                   class="button secondary"
                   target="_blank"
                   rel="noopener noreferrer"
                   >雀魂で牌譜を開く ↗</a
                 >
                 <p class="micro">
-                  公式アプリからコピーしたURLだけでは、現在のアプリは牌譜本文を取得できません。認証と利用許可のある取得API／サーバーが必要です。
+                  雀魂の別タブで自分でログインしてください。ページ移動・再読み込み後は補助ツールを再実行し、準備OKの後に牌譜を開き直します。URLを開くだけでは取得されません。
                 </p>
               </div>
             </div>
@@ -260,14 +259,14 @@
         <section id="guide" class="guide" aria-labelledby="guide-title">
           <div class="guide-heading">
             <span class="overline">HOW IT WORKS</span>
-            <h2 id="guide-title">Safari版雀魂向けの補助手順（参考）</h2>
+            <h2 id="guide-title">Safariでログインして牌譜を取得（試作品）</h2>
             <p>
               <a class="button secondary" href="./ipad-guide.html"
                 >iPadの詳しい操作手順を開く ↗</a
               >
             </p>
             <p>
-              以下はブラウザ版を別途利用する方向けの参考手順です。公式アプリで共有URLをコピーするだけの使い方には対応していません。<br />Safari実機での取得は未検証です。雀魂の更新で動作しなくなる場合があります。
+              Safariにログインして通常の牌譜再生通信を読み取ります。ログイン情報の入力・提供は不要です。<br />Safari実機での取得は未検証です。雀魂の更新で動作しなくなる場合があります。
             </p>
           </div>
           <div class="guide-grid">
