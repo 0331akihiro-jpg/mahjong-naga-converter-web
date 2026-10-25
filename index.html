@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <title>牌譜の橋 — 雀魂からNAGAへ</title>
-    <script type="module" crossorigin src="./assets/index-u94XJkJl.js"></script>
+    <script type="module" crossorigin src="./assets/index-BAt0sgSN.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BdIWV-Ae.css">
   </head>
   <body>
@@ -243,6 +243,21 @@
               <p id="copy-status" class="micro" role="status"></p>
               <p id="url-check-status" class="micro" role="status"></p>
               <p class="notice"><strong>NAGAでは「カスタム牌譜解析」の大きな入力欄へ貼り付けます。</strong><br />「URL解析」の1行欄では「urlの形式が違います」になります。ログイン後に通常タブへ戻った場合も「カスタム」を選び直してください。</p>
+              <details id="inspection-panel">
+                <summary>復号した局情報・打牌情報を確認</summary>
+                <p class="micro">端末内だけで表示します。入力した元牌譜と出力の打牌配列が一致しても、雀魂の再生画面との実機照合は別途必要です。</p>
+                <p class="micro">牌コード：11〜19＝萬子、21〜29＝筒子、31〜39＝索子、41〜47＝東南西北白發中、51〜53＝赤5萬・筒・索。60＝ツモ切り、r＝立直、c/p/m/a/k＝副露・槓の符号です。取得配列は副露も含み、巡目と1対1ではありません。</p>
+                <pre id="decoded-preview" style="white-space:pre-wrap;overflow-wrap:anywhere;max-height:480px;overflow:auto"></pre>
+              </details>
+              <details>
+                <summary>NAGAへ貼ったURLを端末内で検査</summary>
+                <label for="inspect-input">NAGAの入力欄からコピーし直した全文を貼り付け</label>
+                <textarea id="inspect-input" rows="4" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+                <button id="inspect-button" class="button secondary" type="button">貼り付けたURLを検査</button>
+                <p id="inspect-status" class="micro" role="status"></p>
+                <p class="micro">送信・保存しません。%25の有無だけで判定せず、公式と同じ復号処理でJSONを確認します。</p>
+              </details>
+              <p class="notice">NAGAの表示額は「選択したNAGAタイプ数に応じた1局単価 × 入力局数」です。11NPだけではタイプ数は判定できません。NAGA側の選択タイプ・貼り付け行数を確認してください。ボタン表示はデータ検査の合格を意味しません。解析ボタンは押さないでください。</p>
               <p id="naga-rule-note" class="micro"></p>
               <a
                 class="naga-link"
@@ -349,7 +364,7 @@
         </p>
       </section>
       <footer>
-        <span>牌譜の橋 <small>v0.3.1 · Safari牌譜変換</small></span>
+        <span>牌譜の橋 <small>v0.3.2 · Safari牌譜変換</small></span>
         <p>
           <a href="./THIRD_PARTY_NOTICES.md">ライセンスと出典</a
           ><br />雀魂・NAGAの公式サービスではありません。<br />変換ツールは無料。NAGAの解析料金は別途必要です。
