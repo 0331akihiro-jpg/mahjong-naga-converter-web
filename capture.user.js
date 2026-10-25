@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         雀魂 NAGA用牌譜保存（自動注文なし）
 // @namespace    mahjong-naga-converter
-// @version      0.3.0
+// @version      0.3.1
 // @description  自分が開いた牌譜の通信だけを保存。認証情報の収集・解析の注文なし。
 // @match        https://game.mahjongsoul.com/*
 // @match        https://game.maj-soul.com/*

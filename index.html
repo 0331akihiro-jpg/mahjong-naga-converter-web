@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <title>牌譜の橋 — 雀魂からNAGAへ</title>
-    <script type="module" crossorigin src="./assets/index-B4QdBUzj.js"></script>
+    <script type="module" crossorigin src="./assets/index-u94XJkJl.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BdIWV-Ae.css">
   </head>
   <body>
@@ -241,16 +241,18 @@
                 </button>
               </div>
               <p id="copy-status" class="micro" role="status"></p>
+              <p id="url-check-status" class="micro" role="status"></p>
+              <p class="notice"><strong>NAGAでは「カスタム牌譜解析」の大きな入力欄へ貼り付けます。</strong><br />「URL解析」の1行欄では「urlの形式が違います」になります。ログイン後に通常タブへ戻った場合も「カスタム」を選び直してください。</p>
               <p id="naga-rule-note" class="micro"></p>
               <a
                 class="naga-link"
-                href="https://naga.dmv.nico/naga_report/order_form/"
+                href="https://naga.dmv.nico/naga_report/order_form/?show_tab=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 >NAGAのカスタム牌譜画面を開く ↗</a
               >
               <p class="micro">
-                自動送信しません。NAGAで貼り付け・内容確認後、ご自身で注文してください。解析にはNAGAのポイントが必要です。
+                自動送信しません。再テストは貼り付けと表示確認までにし、解析ボタンは押さないでください。解析を押すとポイントを消費します。
               </p>
             </div>
             <div id="output-status" class="status" role="status"></div>
@@ -343,11 +345,11 @@
       <section class="notice" aria-label="検証状況">
         <strong>検証済みと未確認を分けてご案内します</strong>
         <p>
-          Chromium・WebKitでファイル変換とタブ間受け渡しを自動テストしています。NAGA公式の入力チェックも端末内で照合しています。iPad実機での雀魂取得・保存・ホーム画面追加、NAGAサーバーへの送信は未検証です。URLだけで自動変換できるアプリではありません。
+          Chromium・WebKitでファイル変換とタブ間受け渡しを自動テストしています。NAGA公式の入力チェックも端末内で照合しています。iPad実機での取得と変換画面への受け渡しは利用者が確認済みです。保存・ホーム画面追加、NAGAサーバーでの受理は未検証です。URLだけで自動変換できるアプリではありません。
         </p>
       </section>
       <footer>
-        <span>牌譜の橋 <small>v0.2.1 · ファイル変換</small></span>
+        <span>牌譜の橋 <small>v0.3.1 · Safari牌譜変換</small></span>
         <p>
           <a href="./THIRD_PARTY_NOTICES.md">ライセンスと出典</a
           ><br />雀魂・NAGAの公式サービスではありません。<br />変換ツールは無料。NAGAの解析料金は別途必要です。
