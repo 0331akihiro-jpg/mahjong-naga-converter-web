@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <title>牌譜の橋 — 雀魂からNAGAへ</title>
-    <script type="module" crossorigin src="./assets/index-D74NB0SR.js"></script>
+    <script type="module" crossorigin src="./assets/index-B4QdBUzj.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BdIWV-Ae.css">
   </head>
   <body>
@@ -48,6 +48,14 @@
             <div class="art-caption">REPLAY. REFLECT. IMPROVE.</div>
           </div>
         </section>
+        <div class="notice" id="native-app-status">
+          <strong
+            >雀魂公式アプリの共有URLだけでの変換は、現在未対応です。</strong
+          >
+          <p>
+            このアプリで動作するのは、取得済みの牌譜ファイルの変換です。公式アプリのログイン状態はSafariへ引き継がれません。URLの形式確認だけではNAGA用データは生成されません。
+          </p>
+        </div>
         <ol class="steps" aria-label="変換の流れ">
           <li><span>01</span> 牌譜を用意</li>
           <li><span>02</span> 局を選んで変換</li>
@@ -143,20 +151,21 @@
               <div class="notice">
                 <strong>URLだけの自動取得には未対応です</strong>
                 <p>
-                  未ログインのAPI取得はエラーとなることを確認しています。Safariの雀魂にログインし、補助ツールで牌譜を開いて取得してください。取得後は「変換画面に送る」か、ファイル保存で渡せます。
+                  共有URLの形式は確認できますが、牌譜本文の取得には認証が必要です。公式アプリのURLだけで完了する取得APIはまだ用意できていません。Safari版雀魂や拡張機能は、公式アプリだけを使う場合の解決策にはなりません。
                 </p>
               </div>
               <div id="url-result" hidden>
                 <p id="url-id" class="micro"></p>
                 <a
                   id="open-replay"
+                  hidden
                   class="button secondary"
                   target="_blank"
                   rel="noopener noreferrer"
                   >雀魂で牌譜を開く ↗</a
                 >
                 <p class="micro">
-                  補助ツールを有効にしてから牌譜を開き直してください。
+                  公式アプリからコピーしたURLだけでは、現在のアプリは牌譜本文を取得できません。認証と利用許可のある取得API／サーバーが必要です。
                 </p>
               </div>
             </div>
@@ -251,14 +260,14 @@
         <section id="guide" class="guide" aria-labelledby="guide-title">
           <div class="guide-heading">
             <span class="overline">HOW IT WORKS</span>
-            <h2 id="guide-title">iPadだけで、牌譜を用意する。</h2>
+            <h2 id="guide-title">Safari版雀魂向けの補助手順（参考）</h2>
             <p>
               <a class="button secondary" href="./ipad-guide.html"
                 >iPadの詳しい操作手順を開く ↗</a
               >
             </p>
             <p>
-              初回だけ補助ツールを登録。2回目からは牌譜を開き、「変換画面に送る」で渡せます。<br />Safari実機での取得は未検証です。雀魂の更新で動作しなくなる場合があります。
+              以下はブラウザ版を別途利用する方向けの参考手順です。公式アプリで共有URLをコピーするだけの使い方には対応していません。<br />Safari実機での取得は未検証です。雀魂の更新で動作しなくなる場合があります。
             </p>
           </div>
           <div class="guide-grid">
@@ -339,7 +348,7 @@
         </p>
       </section>
       <footer>
-        <span>牌譜の橋 <small>v0.2 · 端末内変換</small></span>
+        <span>牌譜の橋 <small>v0.2.1 · ファイル変換</small></span>
         <p>
           <a href="./THIRD_PARTY_NOTICES.md">ライセンスと出典</a
           ><br />雀魂・NAGAの公式サービスではありません。<br />変換ツールは無料。NAGAの解析料金は別途必要です。
