@@ -1,6 +1,6 @@
 // Generated shell-only cache. User replay data is never cached.
-const CACHE = 'haifu-no-hashi-cf06e7acfc188a85';
-const FILES = ["index.html","ipad-guide.html","manifest.webmanifest","icon.svg","icon-192.png","icon-512.png","apple-touch-icon.png","bookmarklet.txt","capture.user.js","demo.msr.json","LICENSE.txt","THIRD_PARTY_NOTICES.md","licenses/AsaChiri-MIT.txt","licenses/Apache-2.0.txt","assets/index-BAt0sgSN.js","assets/index-BdIWV-Ae.css"];
+const CACHE = 'haifu-no-hashi-18b19d04b4ad8055';
+const FILES = ["index.html","ipad-guide.html","manifest.webmanifest","icon.svg","icon-192.png","icon-512.png","apple-touch-icon.png","bookmarklet.txt","capture.user.js","demo.msr.json","LICENSE.txt","THIRD_PARTY_NOTICES.md","licenses/AsaChiri-MIT.txt","licenses/Apache-2.0.txt","assets/index-BdIWV-Ae.css","assets/index-C2Z7NpJZ.js"];
 const scope = new URL('./', self.location.href);
 const allowed = new Set(FILES.map(path => new URL(path, scope).href));
 self.addEventListener('install', event => {

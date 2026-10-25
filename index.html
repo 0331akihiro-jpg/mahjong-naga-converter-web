@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <title>牌譜の橋 — 雀魂からNAGAへ</title>
-    <script type="module" crossorigin src="./assets/index-BAt0sgSN.js"></script>
+    <script type="module" crossorigin src="./assets/index-C2Z7NpJZ.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BdIWV-Ae.css">
   </head>
   <body>
@@ -53,7 +53,7 @@
             >雀魂公式アプリの共有URLだけでの変換は、現在未対応です。</strong
           >
           <p>
-            Safari版雀魂に自分でログインし、補助ツールを有効にして牌譜を開く方式を試せます。取得後は「変換画面に送る」で渡します。iPad実機での取得は未検証です。
+            Safari版雀魂に自分でログインし、補助ツールを有効にして牌譜を開く方式を試せます。取得後は「変換画面に送る」で渡します。iPad実機での取得・受け渡しは利用者が確認済みです。
           </p>
         </div>
         <ol class="steps" aria-label="変換の流れ">
@@ -241,6 +241,7 @@
                 </button>
               </div>
               <p id="copy-status" class="micro" role="status"></p>
+              <p class="notice">複数局は<strong>1局1行</strong>です。自動折り返しは改行ではありません。NAGAから全文をコピーして下の検査欄へ貼り戻し、選択局数と行数が一致するか確認できます。改行が失われた場合は復元、またはテキスト保存からのコピーを試してください。</p>
               <p id="url-check-status" class="micro" role="status"></p>
               <p class="notice"><strong>NAGAでは「カスタム牌譜解析」の大きな入力欄へ貼り付けます。</strong><br />「URL解析」の1行欄では「urlの形式が違います」になります。ログイン後に通常タブへ戻った場合も「カスタム」を選び直してください。</p>
               <details id="inspection-panel">
@@ -254,6 +255,7 @@
                 <label for="inspect-input">NAGAの入力欄からコピーし直した全文を貼り付け</label>
                 <textarea id="inspect-input" rows="4" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
                 <button id="inspect-button" class="button secondary" type="button">貼り付けたURLを検査</button>
+                <button id="restore-lines" class="button secondary" type="button">改行を復元して検査</button>
                 <p id="inspect-status" class="micro" role="status"></p>
                 <p class="micro">送信・保存しません。%25の有無だけで判定せず、公式と同じ復号処理でJSONを確認します。</p>
               </details>
@@ -283,7 +285,7 @@
               >
             </p>
             <p>
-              Safariにログインして通常の牌譜再生通信を読み取ります。ログイン情報の入力・提供は不要です。<br />Safari実機での取得は未検証です。雀魂の更新で動作しなくなる場合があります。
+              Safariにログインして通常の牌譜再生通信を読み取ります。ログイン情報の入力・提供は不要です。<br />Safari実機での取得は利用者が確認済みです。雀魂の更新で動作しなくなる場合があります。
             </p>
           </div>
           <div class="guide-grid">
@@ -345,7 +347,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 >NAGA有料プラン規約</a
-              >）と共有権限を確認し、ご自身が閲覧・利用できる牌譜だけを扱ってください。認証回避・自動ログイン・NAGAへの自動注文は行いません。NAGA公式クライアントの入力チェックは実牌譜12局で確認済みです。NAGAサーバーでの受理・解析成功は未検証です。
+              >）と共有権限を確認し、ご自身が閲覧・利用できる牌譜だけを扱ってください。認証回避・自動ログイン・NAGAへの自動注文は行いません。NAGA公式クライアントの入力チェックは実牌譜12局で確認済みです。1局のNAGA解析完了は利用者が確認済みです。複数局の一括解析完了は未確認です。
             </p>
           </details>
           <div class="install-note">
@@ -360,11 +362,11 @@
       <section class="notice" aria-label="検証状況">
         <strong>検証済みと未確認を分けてご案内します</strong>
         <p>
-          Chromium・WebKitでファイル変換とタブ間受け渡しを自動テストしています。NAGA公式の入力チェックも端末内で照合しています。iPad実機での取得と変換画面への受け渡しは利用者が確認済みです。保存・ホーム画面追加、NAGAサーバーでの受理は未検証です。URLだけで自動変換できるアプリではありません。
+          Chromium・WebKitでファイル変換とタブ間受け渡しを自動テストしています。NAGA公式の入力チェックも端末内で照合しています。iPad実機での取得と変換画面への受け渡しは利用者が確認済みです。1局のNAGA解析完了も利用者が確認済みです。保存・ホーム画面追加と複数局の一括解析完了は未確認です。URLだけで自動変換できるアプリではありません。
         </p>
       </section>
       <footer>
-        <span>牌譜の橋 <small>v0.3.2 · Safari牌譜変換</small></span>
+        <span>牌譜の橋 <small>v0.3.3 · Safari牌譜変換</small></span>
         <p>
           <a href="./THIRD_PARTY_NOTICES.md">ライセンスと出典</a
           ><br />雀魂・NAGAの公式サービスではありません。<br />変換ツールは無料。NAGAの解析料金は別途必要です。
