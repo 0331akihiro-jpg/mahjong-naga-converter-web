@@ -1,6 +1,6 @@
 {
   "app": "牌譜の橋",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "containsRealReplays": false,
   "files": [
     {
@@ -19,9 +19,9 @@
       "sha256": "202a8ce02adc17d87c596a51f714f45713b81b841cbb60ec4404137bec573b88"
     },
     {
-      "path": "assets/index-C2Z7NpJZ.js",
-      "bytes": 34239,
-      "sha256": "3d362bc1f85fb5d500555c4c7a9edff08ef101de94a4bf57cb14314f2e843136"
+      "path": "assets/index-DOCgZdHV.js",
+      "bytes": 39951,
+      "sha256": "808a7493acb7c5f80d596319220f296446de821bc9fd60714c931701dcf08350"
     },
     {
       "path": "bookmarklet.txt",
@@ -31,7 +31,7 @@
     {
       "path": "capture.user.js",
       "bytes": 10427,
-      "sha256": "8df18202f53a394e33efba4834ec086d2cefd7cdb9b1487cb2379a8751263d55"
+      "sha256": "3c15f93226f5450359d98fc1bd8c68b3d3b2e8b2c32bd8a897b4b36b1b8d9b88"
     },
     {
       "path": "demo.msr.json",
@@ -55,13 +55,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 20995,
-      "sha256": "b3b4709ba00afe5b284d11ae3b2a40506f7d5af4ecb1393a04b58acabe4529bb"
+      "bytes": 22664,
+      "sha256": "54202b352cf8731c7d3e331d5f5968b93820cbf80c28e561755d143e8c47eafa"
     },
     {
       "path": "ipad-guide.html",
-      "bytes": 16077,
-      "sha256": "d9d26f16096b6bd1cc6c9fcb582afecf87ac8b08dfa15fd146a73a0ff0a03718"
+      "bytes": 17731,
+      "sha256": "3f6afbd48866aa358758ed4d3e698c46535a84555b9c42f54787e3fa6dfaaa46"
     },
     {
       "path": "LICENSE.txt",
@@ -91,7 +91,7 @@
     {
       "path": "sw.js",
       "bytes": 1587,
-      "sha256": "ef5271c2663de147e1aa0c818c6c53d7d353ce79094a401a5db9bb39f43a50c2"
+      "sha256": "8d66f700a237890ea8a9114d5b4b656bf7ff3639bd2631c78f85152696dc4f93"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",

@@ -18,7 +18,7 @@
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <title>牌譜の橋 — 雀魂からNAGAへ</title>
-    <script type="module" crossorigin src="./assets/index-C2Z7NpJZ.js"></script>
+    <script type="module" crossorigin src="./assets/index-DOCgZdHV.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BdIWV-Ae.css">
   </head>
   <body>
@@ -252,12 +252,26 @@
               </details>
               <details>
                 <summary>NAGAへ貼ったURLを端末内で検査</summary>
+                <label for="copy-reference">最後のコピー直前の全文（比較元・読取専用）</label>
+                <textarea id="copy-reference" readonly rows="3" spellcheck="false"></textarea>
+                <p id="copy-reference-status" class="micro">「コピーする」を押すと、その直前の全文を記録します。</p>
                 <label for="inspect-input">NAGAの入力欄からコピーし直した全文を貼り付け</label>
                 <textarea id="inspect-input" rows="4" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
                 <button id="inspect-button" class="button secondary" type="button">貼り付けたURLを検査</button>
                 <button id="restore-lines" class="button secondary" type="button">改行を復元して検査</button>
+                <label for="single-success">解析成功した1局のURL（任意・同じ半荘のもの）</label>
+                <textarea id="single-success" rows="2" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+                <button id="compare-transfer" class="button secondary" type="button">コピー前後を比較診断</button>
                 <p id="inspect-status" class="micro" role="status"></p>
                 <p class="micro">送信・保存しません。%25の有無だけで判定せず、公式と同じ復号処理でJSONを確認します。</p>
+              </details>
+              <details id="diagnosis-panel">
+                <summary>比較診断レポート（エラー時も確認できます）</summary>
+                <p id="diagnosis-status" class="micro" role="status"></p>
+                <p class="micro">source＝コピー直前、returned＝貼り戻し、rows＝各行の処理結果。位置は1始まりです。レポートに元URL・対局者名・打牌配列は含めません。自動送信・保存はしません。選択変更・再変換・新しい牌譜の読み込みで記録を消します。</p>
+                <textarea id="diagnosis-report" readonly rows="14" spellcheck="false" aria-label="コピー前後の比較診断レポート"></textarea>
+                <button id="copy-diagnosis" class="button secondary" type="button">診断レポートだけコピー</button>
+                <p id="diagnosis-copy-status" class="micro" role="status"></p>
               </details>
               <p class="notice">NAGAの表示額は「選択したNAGAタイプ数に応じた1局単価 × 入力局数」です。11NPだけではタイプ数は判定できません。NAGA側の選択タイプ・貼り付け行数を確認してください。ボタン表示はデータ検査の合格を意味しません。解析ボタンは押さないでください。</p>
               <p id="naga-rule-note" class="micro"></p>
@@ -366,7 +380,7 @@
         </p>
       </section>
       <footer>
-        <span>牌譜の橋 <small>v0.3.3 · Safari牌譜変換</small></span>
+        <span>牌譜の橋 <small>v0.3.4 · Safari牌譜変換</small></span>
         <p>
           <a href="./THIRD_PARTY_NOTICES.md">ライセンスと出典</a
           ><br />雀魂・NAGAの公式サービスではありません。<br />変換ツールは無料。NAGAの解析料金は別途必要です。
